@@ -15,7 +15,9 @@ $user -> town = "Aalborg";
 $user -> country = "Danmark";
 $user -> birthday = "10 januar 1995";
 $user -> securitynumber = 123456789;
-$user -> GetData();
+
+echo $user -> GetFullName();
+echo $user -> GetAdress();
 ?>
 <?php
 require_once DOCROOT . "/assets/incl/footer.php";

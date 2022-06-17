@@ -11,10 +11,16 @@ class User {
     public $birthday;
     public $securitynumber;
 
-    function GetData(){
-        echo "Fuldenavn: $this->firstname $this->lastname <br>" ;
-        echo "Adresse: $this->adress<br> $this->zipcode $this->town <br>$this->country<br>";
-        echo "Fødselsdag: $this->birthday";
+    public function GetFullName(){
+        //$this   da vi er inde i et nyt scope 
+        return "<p>Fuldenavn: $this->firstname $this->lastname<br></p>
+        
+        <p>Fødselsdag: $this->birthday</p>";
     }
+    public function GetAdress(){
+        return "<p>Adresse: $this->adress<br>$this->zipcode 
+        $this->town<br>$this->country<br></p>";
+    }
+
 }
 ?>
